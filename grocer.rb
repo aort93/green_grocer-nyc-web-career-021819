@@ -41,8 +41,8 @@ end
 
 def checkout(cart, coupons)
   consolidated_cart = consolidate_cart(cart)
-  coupone_price = apply_coupons(consolidated_cart, coupons)
-  final_cart = apply_clearance(couponed_cart)
+  coupon_price = apply_coupons(consolidated_cart, coupons)
+  final_cart = apply_clearance(coupon_price)
   total = 0
   final_cart.each do |name, properties|
     total += properties[:price] * properties[:count]
